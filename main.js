@@ -2,8 +2,8 @@
 let connectButton = document.getElementById('connect');
 let disconnectButton = document.getElementById('disconnect');
 let terminalContainer = document.getElementById('terminal');
-let sendForm = document.getElementById('send-form');
-let inputField = document.getElementById('input');
+//let sendForm = document.getElementById('send-form');
+//let inputField = document.getElementById('input');
 let switchButton = document.getElementById('switchLed');
 
 // Подключение к устройству при нажатии на кнопку Connect
@@ -17,12 +17,12 @@ disconnectButton.addEventListener('click', function () {
 });
 
 // Обработка события отправки формы
-sendForm.addEventListener('submit', function (event) {
-    event.preventDefault(); // Предотвратить отправку формы
-    send(inputField.value); // Отправить содержимое текстового поля
-    inputField.value = '';  // Обнулить текстовое поле
-    inputField.focus();     // Вернуть фокус на текстовое поле
-});
+//sendForm.addEventListener('submit', function (event) {
+//    event.preventDefault(); // Предотвратить отправку формы
+//    send(inputField.value); // Отправить содержимое текстового поля
+//    inputField.value = '';  // Обнулить текстовое поле
+//    inputField.focus();     // Вернуть фокус на текстовое поле
+//});
 
 switchButton.addEventListener('click', function () {
     send('switch');
