@@ -4,6 +4,7 @@ let disconnectButton = document.getElementById('disconnect');
 let terminalContainer = document.getElementById('terminal');
 let sendForm = document.getElementById('send-form');
 let inputField = document.getElementById('input');
+let switchButton = document.getElementById('switchLed');
 
 // Подключение к устройству при нажатии на кнопку Connect
 connectButton.addEventListener('click', function () {
@@ -21,6 +22,10 @@ sendForm.addEventListener('submit', function (event) {
     send(inputField.value); // Отправить содержимое текстового поля
     inputField.value = '';  // Обнулить текстовое поле
     inputField.focus();     // Вернуть фокус на текстовое поле
+});
+
+switchButton.addEventListener('click', function () {
+    send('switch');
 });
 
 // Кэш объекта выбранного устройства
